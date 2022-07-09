@@ -5,7 +5,7 @@
              version="2.1">
     <persistence-unit name="unit" transaction-type="RESOURCE_LOCAL">
         <properties>
-            <!--    <class>pl.iwona.hibernate_kurs_null_pointer.hibernate.entity.Product</class>-->
+<!--            <class>pl.iwona.entity.Product</class>-->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url"
                       value="jdbc:mysql://localhost:3306/kurshibernate?serverTimezone=UTC" />
