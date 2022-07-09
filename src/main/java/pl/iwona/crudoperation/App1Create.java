@@ -1,4 +1,4 @@
-package pl.iwona;
+package pl.iwona.crudoperation;
 
 import pl.iwona.entity.Product;
 import pl.iwona.entity.ProductType;

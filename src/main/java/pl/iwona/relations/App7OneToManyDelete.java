@@ -1,4 +1,4 @@
-package pl.iwona;
+package pl.iwona.relations;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,9 +11,9 @@ import javax.persistence.Persistence;
 /**
  * Hello world!
  */
-public class App3Update {
+public class App7OneToManyDelete {
 
-    private static Logger logger = LogManager.getLogger(App3Update.class);
+    private static Logger logger = LogManager.getLogger(App7OneToManyDelete.class);
 
     private static EntityManagerFactory entityManagerFactory =
             Persistence.createEntityManagerFactory("unit");//zdognie z baza danych do ktorej sa przypisane
@@ -23,15 +23,8 @@ public class App3Update {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
 
-//        Product product = entityManager.find(Product.class, 1L);
-//        product.setName("Nowy Rower 01"); // dirty checking sprawdza czy wartosci pola sie pozmieniałay
-        //Product merge = entityManager.merge(product);
-
-        Product product = new Product();
-        product.setId(1L);
-        product.setName("Nowy Rower 02");
-        Product merged = entityManager.merge(product);
-        logger.info(product);
+        Product product = entityManager.find(Product.class, 2L);
+        entityManager.remove(product);
 
         entityManager.getTransaction().commit();
         entityManager.close();

@@ -6,6 +6,9 @@
     <persistence-unit name="unit" transaction-type="RESOURCE_LOCAL">
         <properties>
 <!--            <class>pl.iwona.entity.Product</class>-->
+<!--            <class>pl.iwona.entity.Review</class>-->
+<!--            <class>pl.iwona.entity.Category</class>-->
+<!--            <class>pl.iwona.entity.Attribute</class>-->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url"
                       value="jdbc:mysql://localhost:3306/kurshibernate?serverTimezone=UTC" />

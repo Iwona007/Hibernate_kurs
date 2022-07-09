@@ -1,4 +1,4 @@
-package pl.iwona;
+package pl.iwona.crudoperation;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,9 +11,9 @@ import javax.persistence.Persistence;
 /**
  * Hello world!
  */
-public class App4Delete {
+public class App2Find {
 
-    private static Logger logger = LogManager.getLogger(App4Delete.class);
+    private static Logger logger = LogManager.getLogger(App2Find.class);
 
     private static EntityManagerFactory entityManagerFactory =
             Persistence.createEntityManagerFactory("unit");//zdognie z baza danych do ktorej sa przypisane
@@ -24,7 +24,6 @@ public class App4Delete {
         entityManager.getTransaction().begin();
 
         Product product = entityManager.find(Product.class, 1L);
-        entityManager.remove(product);
         logger.info(product);
 
         entityManager.getTransaction().commit();
