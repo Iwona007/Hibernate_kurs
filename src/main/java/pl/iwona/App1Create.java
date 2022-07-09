@@ -15,10 +15,10 @@ import org.apache.logging.log4j.Logger;
  * Hello world!
  *
  */
-public class App 
+public class App1Create
 {
 
-    private static Logger logger = LogManager.getLogger(App.class);
+    private static Logger logger = LogManager.getLogger(App1Create.class);
 
     private static EntityManagerFactory entityManagerFactory =
             Persistence.createEntityManagerFactory("unit");//zdognie z baza danych do ktorej sa przypisane
